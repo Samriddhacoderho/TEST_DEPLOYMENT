@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const HomeComponent = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState('');
   const [msg, setMsg] = useState('');
 
   useEffect(() => {
@@ -30,9 +30,7 @@ const HomeComponent = () => {
       <h2>Products</h2>
       {msg && <div>{msg}</div>}
       <ul>
-        {products.map(p => (
-          <li key={p.id}>{p.name} - ${p.price}</li>
-        ))}
+        <li>{products}</li>
       </ul>
     </div>
   );
