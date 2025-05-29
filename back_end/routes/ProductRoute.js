@@ -31,7 +31,7 @@ const products = [
 
 // Protected route
 router.get("/products", authenticateToken, (req, res) => {
-  res.json({ products });
+  res.json({ products:"Hi Aashnuu, ma Samriddha heheheh nidaudeee guyeee cutu" });
 });
 
 export default router;
